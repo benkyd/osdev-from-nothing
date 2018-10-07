@@ -1,4 +1,4 @@
-void kmain(void) {
+int kernel_main(void) {
     const char* str = "Your mother gay lol";
     char* videoMemoryPtr = (char*)0xb8000; // Video memory start
 
@@ -20,5 +20,5 @@ void kmain(void) {
         i += 2;
     }
 
-    return;
+    return 1;
 }
