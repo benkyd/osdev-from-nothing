@@ -1,5 +1,7 @@
 # ThanOS
 # Copyright Benjamin Kyd (c) 2018
+# Origionaly written by xX_WhatsTheGeek_Xx
+# Modified by Benjamin Kyd
 
 # CONFIGURATION
 DELETE = rm -f 
