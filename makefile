@@ -24,7 +24,7 @@ ASM_OBJ = $(patsubst $(SRC_DIR)/%.asm,$(OBJ_DIR)/%.o,$(ASM_SRC)) $(patsubst $(LI
 # unused: -Wall -Wextra
 GPP_CMD = i686-elf-g++
 GAS_CMD = i686-elf-as
-LDFLAGS = -T linker.ld -ffreestanding -O2 -nostdlib -lgcc -Wwrite-strings
+LDFLAGS = -T link.ld -ffreestanding -O2 -nostdlib -lgcc -Wwrite-strings
 CPPFLAGS = -I $(INC_DIR) -ffreestanding -O2 -fno-rtti -Wno-write-strings -Wno-multichar -Wno-unused-parameter -Wno-overflow -Wno-narrowing -fno-exceptions -Wno-trigraphs
 CXXFLAGS = 
 GASFLAGS = 
