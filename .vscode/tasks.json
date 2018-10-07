@@ -1,0 +1,54 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "bash --login -c 'make'",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (With ISO)",
+            "type": "shell",
+            "command": "bash --login -c 'make iso'",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "&('C:/Program Files/qemu/qemu-system-i386') -kernel bin/ThanOS.bin -serial mon:stdio -drive id=disk,file=hda.img,if=none -device ahci,id=ahci -device ide-drive,drive=disk,bus=ahci.0",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run (With ISO)",
+            "type": "shell",
+            "command": "&('C:/Program Files/qemu/qemu-system-i386') -cdrom bin/ThanOS.iso -serial mon:stdio -drive file=hda.img,format=raw",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run in BOCHS (Rqrs. ISO)",
+            "type": "shell",
+            "command": "&('C:/Program Files (x86)/Bochs-2.6.9/bochsdbg.exe') -f bochsrc.bxrc -q",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}
