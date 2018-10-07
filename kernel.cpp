@@ -1,3 +1,6 @@
+// ThanOS
+// Copyright Benjamin Kyd (c) 2018
+
 int kernel_main(void) {
     const char* str = "Your mother gay lol";
     char* videoMemoryPtr = (char*)0xb8000; // Video memory start

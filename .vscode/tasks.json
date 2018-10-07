@@ -24,9 +24,27 @@
             "problemMatcher": []
         },
         {
-            "label": "Run",
+            "label": "Build All",
             "type": "shell",
-            "command": "&('C:/Program Files/qemu/qemu-system-i386') -kernel bin/ThanOS.bin -serial mon:stdio -drive id=disk,file=hda.img,if=none -device ahci,id=ahci -device ide-drive,drive=disk,bus=ahci.0",
+            "command": "bash --login -c 'make'; bash --login -c 'make iso'",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
+        },
+        {
+            "label": "Build all and run",
+            "type": "shell",
+            "command": "bash --login -c 'make'; bash --login -c 'make iso'; &('D:/Program Files/qemu/qemu-system-i386') -cdrom E:/OS/ThanOS/bin/ThanOS.iso -serial mon:stdio",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
+        },
+        {
+            "label": "Run (NOT WORKING)",
+            "type": "shell",
+            "command": "&('D:/Program Files/qemu/qemu-system-i386') -kernel bin/ThanOS.bin -serial mon:stdio -drive id=disk,file=hda.img,if=none -device ahci,id=ahci -device ide-drive,drive=disk,bus=ahci.0",
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -35,7 +53,7 @@
         {
             "label": "Run (With ISO)",
             "type": "shell",
-            "command": "&('C:/Program Files/qemu/qemu-system-i386') -cdrom bin/ThanOS.iso -serial mon:stdio -drive file=hda.img,format=raw",
+            "command": "&('D:/Program Files/qemu/qemu-system-i386') -cdrom E:/OS/ThanOS/bin/ThanOS.iso -serial mon:stdio",
             "group": {
                 "kind": "test",
                 "isDefault": true
