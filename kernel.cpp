@@ -2,7 +2,7 @@
 // Copyright Benjamin Kyd (c) 2018
 
 int kernel_main(void) {
-    const char* str = "Your mother gay lol";
+    const char* str = "Hello, World!";
     char* videoMemoryPtr = (char*)0xb8000; // Video memory start
 
     unsigned int i = 0;
