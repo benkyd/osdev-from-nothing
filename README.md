@@ -3,7 +3,7 @@
 A 32 bit x86 operating system, the ISO from the latest build will be in ./bin 
 And the latest stable build will be in ./build
 
-To contribute see CODE_OF_CONDUCT.md
+To contribute see CONTRIBUTING.md and CODE_OF_CONDUCT.md
 
 ## Contributors
 - Ben (plane000)#8618 - Founder, Maintainer, Contributer
