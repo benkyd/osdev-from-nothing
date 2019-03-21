@@ -1,7 +1,6 @@
-# ThanOS
+# OSDev starter kit
 
-A 32 bit x86 operating system, the ISO from the latest build will be in ./bin 
-And the latest stable build will be in ./build
+From grub to C, a basic bootable OS to be used by newbie OSDevs for reference.
 
 To contribute see CONTRIBUTING.md and CODE_OF_CONDUCT.md
 
